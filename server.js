@@ -6,10 +6,10 @@ var io = require('socket.io').listen(server);
 users = [];
 connections = [];
 
-server.listen(process.env.PORT || 8081);
+var port = 'http://localhost:3000';
+server.listen(process.env.PORT || 3000);
 
-console.log('server running at http://localhost:8081');
-
+console.log('server running at '+port);
 app.get('/', function(req, res){
 	res.sendFile(__dirname + '/index.html');
 
